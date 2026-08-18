@@ -48,17 +48,10 @@ and the one where amplitude thresholding fails.
 The model is scored on participants it never saw during training, and compared against
 an ICA baseline on the same segments with a paired significance test.
 
-Numbers are produced by `ocular benchmark`, which writes `artifacts/benchmark.json` and
-prints the table below.
-
-<!-- BENCHMARK RESULTS: regenerate with `ocular benchmark` and paste the printed table here -->
-
-| Method | Accuracy | Balanced accuracy | Blink recall | Non-blink recall |
-| --- | --- | --- | --- | --- |
-| Model | | | | |
-| ICA baseline | | | | |
-
-McNemar's test: p = , difference (95% CI to )
+Running `ocular benchmark` writes `artifacts/benchmark.json` and prints a comparison
+table: accuracy, balanced accuracy and per-class recall for both the model and the ICA
+baseline, alongside McNemar's test on their paired predictions and a confidence interval
+on the accuracy difference.
 
 ## Evaluation design
 
