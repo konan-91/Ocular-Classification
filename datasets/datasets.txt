@@ -1,3 +1,0 @@
-EEG dataset used for model training.
-Description: "EEG dataset containing eye artifact and resting brain activity of 45 recording sessions of 39 participants."
-https://osf.io/2qgrd/

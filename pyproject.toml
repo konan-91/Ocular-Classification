@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocular"
+version = "1.0.0"
+description = "Detecting ocular artifacts in EEG by classifying topographic scalp maps"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.scripts]
+ocular = "ocular.cli:main"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
